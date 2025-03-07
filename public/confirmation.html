@@ -1,0 +1,20 @@
+<p id="confirmationMessage"></p>
+
+<script>
+  // Check if sessionStorage is supported
+  if (typeof sessionStorage !== "undefined") {
+    // Retrieve email from sessionStorage
+    const email = sessionStorage.getItem("userEmail");
+
+    if (email) {
+      document.getElementById(
+        "confirmationMessage"
+      ).textContent = `Thank you for your submission! A confirmation has been sent to ${email}.`;
+
+      // Remove the email after it's used
+      sessionStorage.removeItem("userEmail");
+    }
+  } else {
+    console.warn("sessionStorage is not supported in this browser.");
+  }
+</script>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Node.js Form</title>
+  </head>
+  <body>
+    <h1>Submit Your Info</h1>
+    <form id="infoForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+      <br /><br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <br /><br />
+      <!-- Honeypot field (hidden) -->
+      <input type="text" id="honeypot" name="honeypot" style="display: none" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <script src="scripts/form.js"></script>
+  </body>
+</html>
